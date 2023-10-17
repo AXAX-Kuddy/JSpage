@@ -1,3 +1,4 @@
+/*
 const background = document.querySelector("body");
 const backgroundShadow1 = document.querySelector(".big-box");
 const backgroundShadow2 = document.querySelector(".wrapped-box");
@@ -20,3 +21,4 @@ do {
 background.style.background = `linear-gradient(to top, ${selectColor1}, ${selectColor2})`;
 backgroundShadow1.style.boxShadow = `1px 1px 50px ${selectColor3}`;
 backgroundShadow2.style.boxShadow = `1px 1px 50px ${selectColor3}`;
+*/
