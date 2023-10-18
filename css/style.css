@@ -1,6 +1,9 @@
 .hidden {
   display: none;
 }
+.flex {
+  display: flex;
+}
 
 .wrapper {
   display: flex;
@@ -8,66 +11,4 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-}
-
-#side-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 300px;
-  height: 400px;
-}
-#side-box .title-bar {
-  width: 98%;
-  height: 13px;
-}
-#close-button {
-  top: 5px;
-  right: 6px;
-  position: absolute;
-}
-
-/*사이드 박스 본문*/
-.login-wrapper {
-  display: flex;
-  width: 300px;
-  height: 400px;
-  flex-direction: column;
-  position: relative;
-}
-
-#login-icon {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#login-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  position: relative;
-}
-
-#login-form label {
-  margin-left: 5px;
-}
-
-#login-form input {
-  margin-left: 5px;
-  width: 210px;
-  margin-bottom: 10px;
-}
-
-#login-form button {
-  width: 30px;
-  height: 25px;
-  position: absolute;
-  top: 10.5px;
-  right: 5px;
-}
-
-.after-login h1 {
-  font-size: 30px;
 }

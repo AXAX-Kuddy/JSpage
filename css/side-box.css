@@ -12,7 +12,7 @@
 }
 #close-button {
   top: 5px;
-  right: 3px;
+  right: 6px;
   position: absolute;
 }
 
@@ -22,16 +22,15 @@
   width: 300px;
   height: 400px;
   flex-direction: column;
+  position: relative;
 }
 
-.login-icon {
-  display: flex;
+#login-icon {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 #login-form {
-  display: flex;
   flex-direction: column;
   margin-top: 10px;
   position: relative;
@@ -53,4 +52,18 @@
   position: absolute;
   top: 10.5px;
   right: 5px;
+}
+
+#after-login {
+  flex-direction: column;
+  margin-top: 20px;
+
+  #greeting {
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
+#weather {
+  justify-content: center;
 }
