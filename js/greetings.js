@@ -3,7 +3,8 @@ const loginInput = loginForm.querySelector("input");
 const loginButton = loginForm.querySelector("button");
 const loginIcon = document.querySelector("#login-icon");
 const afterLogin = document.querySelector("#after-login");
-const greeting = document.querySelector("#greeting");
+const greeting = document.querySelector("#user-id");
+const greeting2 = document.querySelector("#wellcome-text");
 const weather = document.querySelector("#weather");
 
 const HIDDEN_CLASSNAME = "hidden";
@@ -22,8 +23,10 @@ loginForm.addEventListener("submit", onLoginSubmit);
 function paintGreetings() {
   const username = localStorage.getItem(USERNAME_KEY);
   afterLogin.className = FLEX_CLASSNAME;
-  greeting.innerText = `${username}. Wellcome!`;
+  greeting.innerText = `${username}`;
+  greeting2.innerText = "Wellcome!";
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting2.classList.remove(HIDDEN_CLASSNAME);
   weather.className = FLEX_CLASSNAME;
   loginForm.className = HIDDEN_CLASSNAME;
   loginIcon.className = HIDDEN_CLASSNAME;

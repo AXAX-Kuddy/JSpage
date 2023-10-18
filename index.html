@@ -3,41 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css 테마 -->
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="side-box-stylesheet" href="css/side-box.css" />
-    <title>공사중 - 보지말아줘 -</title>
+
+    <!-- css 파일 -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/start-bar.css" />
+    <link rel="stylesheet" href="css/login-part.css" />
+
+    <title>陽気な一日</title>
   </head>
   <body>
     <main class="wrapper">
-      <div id="side-box" class="window">
-        <div class="title-bar" style="color: white">Input your Id</div>
-        <div id="close-button" class="title-bar-controls">
-          <button aria-label="Close"></button>
+      <div id="window-screen" class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            <img src="css/icon/notepad-5.png" />
+            <span>Post - Notepad</span>
+          </div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
         </div>
         <div class="login-wrapper">
           <div id="login-icon">
             <img src="css/icon/key_win_alt-2.png" />
-            <p>ログインするには、あなたのIDを入力してください。</p>
+            <p>あなたの素敵な名前を入力してください。</p>
           </div>
           <form id="login-form">
-            <label for="id-input">ID</label>
-            <input id="id-input" required type="text" maxlength="15" />
-            <button>Log In</button>
+            <label for="id-input">素敵な名前</label>
+            <div class="input-wrapper">
+              <input id="id-input" required type="text" maxlength="15" />
+              <button>Log In</button>
+            </div>
           </form>
           <div id="after-login">
-            <h1 id="greeting" class="hidden"></h1>
+            <h1 id="user-id" class="hidden"></h1>
+            <h1 id="wellcome-text" class="hidden"></h1>
             <div id="weather" class="hidden">
               <span></span>
             </div>
           </div>
-          <div class="wrapped-box"></div>
         </div>
-      </div>
-      <div class="big-box">
-        <h2 id="clock">00:00:00</h2>
         <form id="todo-form">
-          <input type="text" placeholder="오늘의 할 일" required />
+          <input type="text" placeholder="Today's to-do" required />
         </form>
         <div class="wrapped-todo">
           <ul id="todo-list"></ul>
@@ -48,6 +61,14 @@
         </div>
       </div>
     </main>
+    <footer>
+      <div id="start-bar" class="window">
+        <button>Start</button>
+        <div class="tray">
+          <span id="clock">00:00:00</span>
+        </div>
+      </div>
+    </footer>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
