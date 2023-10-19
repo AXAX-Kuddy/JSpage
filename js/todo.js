@@ -18,15 +18,18 @@ function deleteTodo(event) {
 function paintTodo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
-  li.style.marginBottom = "20px";
+  li.style.marginBottom = "10px";
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.style.backgroundColor = "transparent";
-  button.style.border = "none";
-  button.style.color = "white";
-  button.style.textShadow = "1px 1px 2px black";
+  button.style.background = "transparent";
+  button.style.padding = "0";
+  button.style.width = "15px";
+  button.style.height = "15px";
+  button.style.minWidth = "5px";
+  button.style.minHeight = "5px";
   button.innerText = "X";
+
   button.addEventListener("click", deleteTodo);
   li.appendChild(span);
   li.appendChild(button);

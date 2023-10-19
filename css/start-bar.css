@@ -1,3 +1,9 @@
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
 #start-bar {
   width: 100%;
   position: absolute;

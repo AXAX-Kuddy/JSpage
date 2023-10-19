@@ -6,6 +6,8 @@ const afterLogin = document.querySelector("#after-login");
 const greeting = document.querySelector("#user-id");
 const greeting2 = document.querySelector("#wellcome-text");
 const weather = document.querySelector("#weather");
+const logOutForm = document.querySelector("#logout-form");
+const logOutButton = document.querySelector("#logout");
 
 const HIDDEN_CLASSNAME = "hidden";
 const FLEX_CLASSNAME = "flex";
@@ -27,6 +29,7 @@ function paintGreetings() {
   greeting2.innerText = "Wellcome!";
   greeting.classList.remove(HIDDEN_CLASSNAME);
   greeting2.classList.remove(HIDDEN_CLASSNAME);
+  logOutButton.classList.remove(HIDDEN_CLASSNAME);
   weather.className = FLEX_CLASSNAME;
   loginForm.className = HIDDEN_CLASSNAME;
   loginIcon.className = HIDDEN_CLASSNAME;
@@ -40,3 +43,10 @@ if (savedUsername === null) {
 } else {
   paintGreetings();
 }
+
+function onLogoutSubmit(event) {
+  localStorage.removeItem(USERNAME_KEY);
+  alert("You are logged out.");
+}
+
+logOutForm.addEventListener("submit", onLogoutSubmit);

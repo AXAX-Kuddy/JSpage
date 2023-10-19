@@ -10,6 +10,8 @@
 
 body {
   overflow-x: hidden;
+  background: #9c2ec3 url("backgroundImage/bg4.jpg") repeat fixed;
+  background-size: cover;
 }
 .wrapper {
   display: flex;
@@ -21,17 +23,45 @@ body {
 }
 #window-screen {
   display: flex;
-  position: absolute;
-  top: 100px;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  position: absolute;
+  top: 100px;
   width: 480px;
   height: 500px;
+  padding: 5px;
 }
+
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  width: 480px;
+  height: 476px;
+  bottom: 5px;
+  background-color: white;
+  box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px grey, inset -2px -2px #fff,
+    inset 2px 2px#0a0a0a;
+}
+
 .title-bar {
-  width: 98%;
+  width: 477px;
+  position: absolute;
 }
+.title-bar-controls button:first-child {
+  margin-right: 2px;
+}
+
 .title-bar-text img {
   width: 12px;
   height: 12px;
+}
+
+.windowborder {
+  width: 477px;
+  padding: 2px;
+  box-shadow: none;
 }

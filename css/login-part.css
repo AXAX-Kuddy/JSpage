@@ -37,13 +37,14 @@
   width: 30px;
   height: 25px;
   position: absolute;
-  top: -4px;
+  top: -6px;
   right: 5px;
 }
 
 #after-login {
   flex-direction: column;
-  margin-top: 20px;
+  align-items: center;
+  margin-top: 40px;
 
   #user-id {
     text-align: center;
@@ -56,5 +57,14 @@
 }
 
 #weather {
+  margin-top: 10px;
   justify-content: center;
+}
+
+#logout {
+  margin-top: 10px;
+  width: 60px;
+  height: 20px;
+  min-width: 5px;
+  min-height: 5px;
 }
