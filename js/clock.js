@@ -1,11 +1,20 @@
 const clock = document.querySelector("#clock");
+const amOrpm = document.querySelector("#ampm");
 
 function getClock() {
   const date = new Date();
-  const hours = String(date.getHours()).padStart(2, "0");
+  let hours = date.getHours();
   const minutes = String(date.getMinutes()).padStart(2, "0");
-  const seconds = String(date.getSeconds()).padStart(2, "0");
-  clock.innerText = `${hours} . ${minutes} . ${seconds}`;
+  let ampmText = "AM";
+  if (date.getHours() >= 12) {
+    ampmText = "PM";
+    if (hours > 12) {
+      hours -= 12;
+    }
+  }
+  hours = String(hours).padStart(2, "0");
+  clock.innerText = `${hours}:${minutes}`;
+  amOrpm.innerText = ampmText;
 }
 
 getClock();

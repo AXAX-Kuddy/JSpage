@@ -12,6 +12,8 @@ body {
   overflow-x: hidden;
   background: #9c2ec3 url("backgroundImage/bg4.jpg") repeat fixed;
   background-size: cover;
+  min-width: 0px;
+  min-height: 0px;
 }
 .wrapper {
   display: flex;

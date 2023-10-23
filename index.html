@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/start-bar.css" />
     <link rel="stylesheet" href="css/login-part.css" />
     <link rel="stylesheet" href="css/todo-part.css" />
-
+    <link rel="stylesheet" href="css/quotes-part.css" />
     <title>陽気な一日</title>
   </head>
   <body>
@@ -22,7 +22,7 @@
         <div class="title-bar">
           <div class="title-bar-text">
             <img src="css/icon/notepad-5.png" />
-            <span>Post - Notepad</span>
+            <span>Notepad</span>
           </div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
@@ -60,6 +60,7 @@
           <div class="wrapped-todo">
             <ul id="todo-list"></ul>
           </div>
+          <button id="clear-button" class="hidden">Clear</button>
           <div id="quotes">
             <span></span>
             <span></span>
@@ -69,9 +70,27 @@
     </main>
     <footer>
       <div id="start-bar" class="window">
-        <button>Start</button>
+        <button>
+          <img src="css/icon/windows-0.png" />
+          <span>Start</span>
+        </button>
+        <div class="icon-wrapper">
+          <span class="big_separator"></span>
+          <span class="small_separator"></span>
+          <span class="icons">
+            <img src="css/icon/msie1-4.png" />
+            <img src="css/icon/desktop-3.png" />
+            <img src="css/icon/outlook_express-2.png" />
+          </span>
+          <span class="big_separator"></span>
+          <span class="small_separator"></span>
+        </div>
         <div class="tray">
-          <span id="clock">00:00:00</span>
+          <span class="date-icon">
+            <img src="css/icon/time_and_date-0.png" />
+          </span>
+          <span id="clock">00:00</span>
+          <span id="ampm"></span>
         </div>
       </div>
     </footer>

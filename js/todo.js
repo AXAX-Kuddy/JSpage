@@ -1,6 +1,7 @@
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-form input");
 const todoList = document.querySelector("#todo-list");
+const clear = document.querySelector("#clear-button");
 
 let toDos = [];
 
@@ -29,7 +30,6 @@ function paintTodo(newTodo) {
   button.style.minWidth = "5px";
   button.style.minHeight = "5px";
   button.innerText = "X";
-
   button.addEventListener("click", deleteTodo);
   li.appendChild(span);
   li.appendChild(button);
@@ -47,6 +47,7 @@ function onTodoSubmit(event) {
   toDos.push(newTodoObj);
   paintTodo(newTodoObj);
   saveTodos();
+  btnGreeting();
 }
 
 todoForm.addEventListener("submit", onTodoSubmit);
@@ -58,3 +59,17 @@ if (savedTodo !== null) {
   toDos = parsedTodo;
   parsedTodo.forEach(paintTodo);
 }
+
+/* 지우개 */
+function btnGreeting() {
+  const savedTodoLength = toDos.length;
+  if (savedTodoLength >= 1) {
+    clear.classList.remove("hidden");
+  }
+}
+function onClear() {
+  localStorage.removeItem("todos");
+  window.location.reload();
+}
+btnGreeting();
+clear.addEventListener("click", onClear);
