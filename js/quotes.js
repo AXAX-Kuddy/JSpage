@@ -13,9 +13,8 @@ const quotes = [
     author: "Friedrich Nietzsche, Beyond Good and Evil",
   },
   {
-    quote:
-      "I may not have been sure about what really did interest me, but I was absolutely sure about what didn't.",
-    author: "Albert Camus, The Stranger",
+    quote: "Man is the only creature who refuses to be what he is.",
+    author: "Albert Camus",
   },
   {
     quote: "Courage is fear that has said its prayers.",

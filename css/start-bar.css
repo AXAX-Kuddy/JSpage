@@ -100,3 +100,16 @@ footer {
   margin-top: 4px;
   margin-left: 2px;
 }
+
+/*시작 메뉴*/
+
+#start-menu {
+  background-image: url(sprite/master_sprite.png);
+  width: 168px;
+  height: 0;
+  transition: height 0.5s ease-in-out;
+}
+
+.visible {
+  height: 415px;
+}

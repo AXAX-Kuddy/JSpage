@@ -27,11 +27,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: -1;
   position: relative;
   position: absolute;
   top: 100px;
   width: 480px;
   height: 500px;
+  padding: 5px;
+}
+#picture-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: -350px;
+  bottom: -100px;
+  z-index: 1;
+  width: 400px;
+  height: 450px;
   padding: 5px;
 }
 
@@ -49,8 +62,26 @@ body {
     inset 2px 2px#0a0a0a;
 }
 
+#picture-screen .title-bar {
+  width: 393px;
+  position: absolute;
+}
+#picture-screen .detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  width: 400px;
+  height: 425px;
+  bottom: 5px;
+  background-color: white;
+  box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px grey, inset -2px -2px #fff,
+    inset 2px 2px#0a0a0a;
+}
+
 .title-bar {
-  width: 477px;
+  width: 475px;
   position: absolute;
 }
 .title-bar-controls button:first-child {
