@@ -10,7 +10,7 @@
 
 body {
   overflow-x: hidden;
-  background: #9c2ec3 url("backgroundImage/bg4.jpg") repeat fixed;
+  background: #9c2ec3 url("backgroundImage/bg3.jpg") repeat fixed;
   background-size: cover;
   min-width: 0px;
   min-height: 0px;
@@ -72,6 +72,7 @@ body {
   align-items: center;
   position: absolute;
   box-sizing: border-box;
+  overflow-y: auto;
   width: 400px;
   height: 425px;
   bottom: 5px;

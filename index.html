@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/login-part.css" />
     <link rel="stylesheet" href="css/todo-part.css" />
     <link rel="stylesheet" href="css/quotes-part.css" />
+    <link rel="stylesheet" href="css/image-viewer.css" />
+    <link rel="stylesheet" href="css/audio.css" />
     <title>陽気な一日</title>
   </head>
   <body>
@@ -61,16 +63,12 @@
             <ul id="todo-list"></ul>
           </div>
           <button id="clear-button" class="hidden">Clear</button>
-          <div id="quotes">
-            <span></span>
-            <span></span>
-          </div>
         </div>
         <div id="picture-screen" class="window">
           <div class="title-bar">
             <div class="title-bar-text">
-              <img src="css/icon/camera3_vid-2.png" />
-              <span>Photo Uploader</span>
+              <img src="css/icon/msagent-4.png" />
+              <span>Mood Maker</span>
             </div>
             <div class="title-bar-controls">
               <button aria-label="Minimize"></button>
@@ -79,7 +77,26 @@
             </div>
           </div>
           <div class="detail-wrapper">
-            <div></div>
+            <div class="image-viewer">
+              <img id="new-image" />
+            </div>
+            <div id="quotes">
+              <span></span>
+              <span></span>
+            </div>
+            <div id="audio-wrapper">
+              <div id="audio">
+                <iframe
+                  width="387"
+                  height="70"
+                  src="https://www.youtube.com/embed/Sp9AVGH-z6I?si=6sQGCpmkC1NfUsoZ"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -116,9 +133,10 @@
     <script src="js/quotes.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/background.js"></script>
-    <script src="js/big-box-background.js"></script>
+    <script src="js/image-viewer.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/start-menu_anime.js"></script>
+    <!--<script src="js/audio.js"></script>-->
     <script
       src="https://kit.fontawesome.com/19f5397276.js"
       crossorigin="anonymous"
