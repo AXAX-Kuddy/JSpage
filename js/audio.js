@@ -1,30 +1,80 @@
-const audio = new Audio();
+const changeBtn = document.querySelectorAll("#audio-change button");
+const playBtn = document.querySelector("#audio-controller button:first-child");
+const pausedBtn = document.querySelector("#audio-controller button:last-child");
+const musicTitle = document.querySelector("#title");
 
-// 음악 선택 함수
-function selectAudio(audioSrc) {
-  audio.src = audioSrc;
-  audio.play();
+var tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("player", {
+    height: "0",
+    width: "0",
+    videoId: "Sp9AVGH-z6I",
+    host: "http://www.youtube-nocookie.com",
+    playerVars: { autoplay: 1, controls: 0 },
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange,
+    },
+  });
 }
 
-// 페이지가 로드될 때 저장된 음악 및 재생 시간 확인
-window.addEventListener("load", () => {
-  const savedAudioSrc = localStorage.getItem("selectedAudioSrc");
-  const savedTime = localStorage.getItem("audioPlaybackTime");
-
-  if (savedAudioSrc) {
-    audio.src = savedAudioSrc;
+function onPlayerReady(event) {
+  event.target.setVolume(5);
+  player.getPlaybackQuality("small");
+  goToStart(event);
+}
+function onPlayerStateChange(event) {
+  var tm = player.getCurrentTime();
+  if (event.data == YT.PlayerState.ENDED) {
+    goToStart(event);
   }
+}
+function goToStart(event) {
+  event.target.seekTo(0, 1);
+  player.playVideo();
+}
 
-  if (savedTime) {
-    audio.currentTime = parseFloat(savedTime);
+// 음악 변경 파트
+function onPlayBtnClick() {
+  player.playVideo();
+}
+function onPausedBtnClick() {
+  player.pauseVideo();
+}
+
+function changeVideo(videoId) {
+  player.loadVideoById(videoId);
+}
+function chooseMusic(event) {
+  const musicNum = event.target.dataset.music;
+  let videoId = "";
+  console.log(musicNum);
+  if (musicNum === "1") {
+    videoId = "Sp9AVGH-z6I";
+    changeVideo(videoId);
+  } else if (musicNum === "2") {
+    videoId = "eVJVEZOj9Ow";
+    changeVideo(videoId);
+  } else if (musicNum === "3") {
+    videoId = "xYQrPsyu-1s";
+    changeVideo(videoId);
+  } else if (musicNum === "4") {
+    videoId = "BbTSKh_ANPU";
+    changeVideo(videoId);
+  } else if (musicNum === "5") {
+    videoId = "4fjboYVcb9I";
+    changeVideo(videoId);
   }
+}
 
-  audio.play();
-});
+playBtn.addEventListener("click", onPlayBtnClick);
+pausedBtn.addEventListener("click", onPausedBtnClick);
 
-// 페이지가 언로드(닫히는) 될 때 음악 및 재생 시간 저장
-window.addEventListener("beforeunload", () => {
-  localStorage.setItem("selectedAudioSrc", audio.src);
-  localStorage.setItem("audioPlaybackTime", audio.currentTime);
-  audio.pause();
+changeBtn.forEach((Button) => {
+  Button.addEventListener("click", chooseMusic);
 });

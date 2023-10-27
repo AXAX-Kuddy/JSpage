@@ -44,7 +44,7 @@ body {
   bottom: -100px;
   z-index: 1;
   width: 400px;
-  height: 450px;
+  height: 480px;
   padding: 5px;
 }
 
@@ -74,7 +74,7 @@ body {
   box-sizing: border-box;
   overflow-y: auto;
   width: 400px;
-  height: 425px;
+  height: 456px;
   bottom: 5px;
   background-color: white;
   box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px grey, inset -2px -2px #fff,

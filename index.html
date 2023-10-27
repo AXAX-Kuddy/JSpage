@@ -85,16 +85,17 @@
               <span></span>
             </div>
             <div id="audio-wrapper">
-              <div id="audio">
-                <iframe
-                  width="387"
-                  height="70"
-                  src="https://www.youtube.com/embed/Sp9AVGH-z6I?si=6sQGCpmkC1NfUsoZ"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+              <div id="audio-change">
+                <button data-music="1">1</button>
+                <button data-music="2">2</button>
+                <button data-music="3">3</button>
+                <button data-music="4">4</button>
+                <button data-music="5">5</button>
+              </div>
+              <div id="player"></div>
+              <div id="audio-controller">
+                <button id="play">PLAY</button>
+                <button id="pause">PAUSE</button>
               </div>
             </div>
           </div>
@@ -136,7 +137,7 @@
     <script src="js/image-viewer.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/start-menu_anime.js"></script>
-    <!--<script src="js/audio.js"></script>-->
+    <script src="js/audio.js"></script>
     <script
       src="https://kit.fontawesome.com/19f5397276.js"
       crossorigin="anonymous"
