@@ -99,3 +99,36 @@ body {
   padding: 2px;
   box-shadow: none;
 }
+
+
+.icon-base{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70px;
+
+  padding-top: 15px;
+  
+  
+}
+
+.bg-icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bg-icon img{
+  width: 35px;
+  height: 35px;
+}
+
+.bg-icon p{
+  font-size: 13px;
+  color: white;
+}
