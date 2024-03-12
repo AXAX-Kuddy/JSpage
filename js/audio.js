@@ -58,16 +58,16 @@ function chooseMusic(event) {
     videoId = "uDqvO3Lb_As";
     changeVideo(videoId);
   } else if (musicNum === "2") {
-    videoId = "EHzayrRfdyw";
+    videoId = "IgQEefhmPXI";
     changeVideo(videoId);
   } else if (musicNum === "3") {
-    videoId = "xYQrPsyu-1s";
+    videoId = "qIz-9CHVQUc";
     changeVideo(videoId);
   } else if (musicNum === "4") {
-    videoId = "BbTSKh_ANPU";
+    videoId = "1O9kPoVJVB0";
     changeVideo(videoId);
   } else if (musicNum === "5") {
-    videoId = "4fjboYVcb9I";
+    videoId = "v7Srbp8WPMY";
     changeVideo(videoId);
   }
 }
